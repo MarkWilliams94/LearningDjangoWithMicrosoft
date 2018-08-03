@@ -1,3 +1,5 @@
+#Defines configuration class for the app
+
 from django.apps import AppConfig
 
 

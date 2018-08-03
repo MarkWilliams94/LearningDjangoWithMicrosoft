@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'HelloDjangoApp', #app we created to display time and hello django
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -57,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+        'APP_DIRS': True, #instructs Django to look for tempaltes in an installed apps tempaltes folder
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
