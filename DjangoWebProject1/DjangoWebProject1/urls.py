@@ -20,6 +20,7 @@ urlpatterns = [
 
     url(r'^$', HelloDjangoApp.views.index, name='index'),
     url(r'^home$', HelloDjangoApp.views.index, name='home'),
+    url(r'^about$',HelloDjangoApp.views.about,name='about'),
     # Examples:
     # url(r'^$', DjangoWebProject1.views.home, name='home'),
     # url(r'^DjangoWebProject1/', include('DjangoWebProject1.DjangoWebProject1.urls')),
