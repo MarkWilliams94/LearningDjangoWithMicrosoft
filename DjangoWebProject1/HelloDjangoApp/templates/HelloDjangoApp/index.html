@@ -3,14 +3,15 @@
 <html>
     <head>
         <title> {{ title }} </title>
+        {% load staticfiles %} <!-- Instruct Django to load static files -->
+        <link rel="stylesheet" type="text/css" href="{%static 'site.css'%}" />
     </head>
 
     <body>
 
-        <strong> {{ message }} </strong> {{ content }}
-
+        <!-- <strong> {{ message }} </strong> {{ content }} -->
+        <span class="message">{{message}}</span> {{content}}
     </body>
 </html>
-
 
 <!-- added text formatting (strong) to template, removed from views code -->

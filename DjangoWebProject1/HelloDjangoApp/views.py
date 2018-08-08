@@ -42,12 +42,15 @@ from datetime import datetime
 #request is calling to the path of the template
 #NOTE: content is enclosed in {} and the entire call past render is enclosed in () as they are args to the render function
 
+
+#using new version of index template so we can show bold text
+#not using any html in views code
 def index(request):
     now=datetime.now()
 
     return render( #also works if done inline
         request, 
-        "helloDjangoApp/index.html",
+        "HelloDjangoApp/index.html",
         {
             'title' : "Hello django",
             'message': "Hello Django!",
