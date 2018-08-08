@@ -1,17 +1,6 @@
-<!-- Basic template, when called will add value to {{ content }} section -->
 
-<html>
-    <head>
-        <title> {{ title }} </title>
-        {% load staticfiles %} <!-- Instruct Django to load static files -->
-        <link rel="stylesheet" type="text/css" href="{%static 'site.css'%}" />
-    </head>
 
-    <body>
-        <!-- <strong> {{ message }} </strong> {{ content }} -->
-        <div><a href="about">About</a></div>
-        <span class="message">{{message}}</span> <span class="titties">{{content}}</span> 
-    </body>                                         <!-- note the class name titties -->
-</html>
-
-<!-- added text formatting (strong) to template, removed from views code -->
+{% extends "HelloDjangoApp/layout.html" %}
+{% block content %}
+<span class="message">{{ message }}</span>{{ content }}
+{% endblock %}
