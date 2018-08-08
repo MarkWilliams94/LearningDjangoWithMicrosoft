@@ -26,18 +26,32 @@ from datetime import datetime
 # Then when calling, use static code template and pass variables
     #add to installed apps list in main settings file
 
-def index(request): #function definition
-    now=datetime.now()
-
-    return render( #Calling render function w/ args request, template, context
-           request,
-           "index.html", #reference to index tempalte would be file path, but in same folder.
-           {
-               'content': "<strong>Hello Django!</strong> on " + now.strftime("%A, %d, %B, %Y at %X")
-           }
-    )
+#def index(request): #function definition
+#    now=datetime.now()
+#
+#    return render( #Calling render function w/ args request, template, context
+#           request,
+#           "index.html", #reference to index tempalte would be file path, but in same folder.
+#           {
+#               'content': "<strong>Hello Django!</strong> on " + now.strftime("%A, %d, %B, %Y at %X")
+#          }
+#    )
 
 #Using the template from index.html and filling in data for content
 #render helper function is for interfacing with page templates. request, index.html and content are all arguments in render
 #request is calling to the path of the template
 #NOTE: content is enclosed in {} and the entire call past render is enclosed in () as they are args to the render function
+
+def index(request):
+    now=datetime.now()
+
+    return render( #also works if done inline
+        request, 
+        "helloDjangoApp/index.html",
+        {
+            'title' : "Hello django",
+            'message': "Hello Django!",
+            'content' : "on " + now.strftime("%A, %d, %B, %Y at %X")
+            }
+        )
+        
