@@ -2,5 +2,16 @@
 
 {% extends "HelloDjangoApp/layout.html" %}
 {% block content %}
-<span class="message">{{ message }}</span>{{ content }}
+
+<span class="message">{{ message }}</span>
+{{content}} <!--Adding a new-line space does not explicitly translate to a newline in html-->
+<!--use <br/> to add a line break-->
+
+<br/> 
+<br/> 
+    <span class="titties">{{message2}}</span>
+
+
 {% endblock %}
+<!--Uses content block from layout template, and modifier from site.css which is inheriently adopted-->
+<!--Important to note that class and {{"content"}} do not need to match-->

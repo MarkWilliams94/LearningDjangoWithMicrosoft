@@ -52,9 +52,10 @@ def index(request):
         request, 
         "HelloDjangoApp/index.html",
         {
-            'title' : "Hello django",
-            'message': "Hello Django!",
-            'content' : "on " + now.strftime("%A, %d, %B, %Y at %X")
+            'title' : "I am a tab header title!", #Title is the text displayed in the tab
+            'message': "Hello Django!", #See affected by defined class message in site.css 
+            'content' : "on " + now.strftime("%A, %d, %B, %Y at %X"),
+            'message2': "Trying to add a new line"
             }
         )
         

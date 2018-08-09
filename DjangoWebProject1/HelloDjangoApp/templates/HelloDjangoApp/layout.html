@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-
+<!--navbar, navbar-brand, body-content all defined in site.css stylesheet-->
 <html>
 <head>
     <meta charset="utf-8" />
@@ -13,11 +13,12 @@
        <a href="/" class="navbar-brand">Hello Django</a>
        <a href="{% url 'home' %}" class="navbar-item">Home</a>
        <a href="{% url 'about' %}" class="navbar-item">About</a>
+       <a href="{% url 'dangernoggin' %}" class="navbar-item">DangerNoggin</a>
     </div>
 
-    <div class="body-content">
-{% block content %}{% endblock %}
-        <hr/>
+    <div class="body-content"> 
+{% block content %}{% endblock %} <!-- block template deliniated w/ block and end block -->
+        <hr/> <!--Because of deliniation we will preserve the -->
         <footer>
             <p>&copy; 2018</p>
         </footer>
